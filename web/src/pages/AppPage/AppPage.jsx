@@ -2,6 +2,7 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 import Error404 from "./../ErrorPage/Error404";
 import LeftNav from "./../../components/Navs/LeftNav/LeftNav";
+import Newspaper from "./../../components/Main/Newspaper/Newspaper";
 import Tasks from "./../../components/Main/Tasks/Tasks";
 import RightNav from "./../../components/Navs/RightNav/RightNav";
 
@@ -15,7 +16,7 @@ function AppPage() {
         <div className="main">
           <Switch>
             <Route exact path="/">
-              <Tasks />
+              <Newspaper />
             </Route>
             <Route path="/attack">Attack</Route>
             <Route path="/missions">
