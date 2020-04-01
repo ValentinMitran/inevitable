@@ -10,18 +10,31 @@ import "./AppPage.scss";
 function AppPage() {
   return (
     <>
-      <Switch>
-        <Route exact path="/">
-          <div className="appPage">
-            <LeftNav />
-            <Tasks />
-            <RightNav />
-          </div>
-        </Route>
-        <Route path="*">
-          <Error404 />
-        </Route>
-      </Switch>
+      <div className="appPage">
+        <LeftNav />
+        <div className="main">
+          <Switch>
+            <Route exact path="/">
+              <Tasks />
+            </Route>
+            <Route path="/attack">Attack</Route>
+            <Route path="/missions">
+              <Tasks />
+            </Route>
+            <Route path="/club">Club </Route>
+            <Route path="/stockmarket">StockMarket</Route>
+            <Route path="/buildings">Buildings</Route>
+            <Route path="/hospital">Hospital</Route>
+            <Route path="/bank">Bank</Route>
+            <Route path="/casino">Casino</Route>
+            <Route path="/prison">Prison</Route>
+            <Route path="*">
+              <Error404 />
+            </Route>
+          </Switch>
+        </div>
+        <RightNav />
+      </div>
     </>
   );
 }

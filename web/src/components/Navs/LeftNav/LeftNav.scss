@@ -1,0 +1,55 @@
+.leftNav {
+  height: 100%;
+  width: 250px;
+  font-size: 10px;
+  background-color: #464646;
+  border: 2px solid #000000;
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
+  a {
+    padding: 5px;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    &:hover {
+      background-color: rgb(163, 163, 163);
+    }
+  }
+  span {
+    font-size: 16px;
+  }
+}
+.menu-sprite {
+  width: 32px;
+  height: 40px;
+  background-image: url(https://www.thecrims.com/static/images/menu/menu-sprites.png);
+}
+#menu-sprite-assault {
+  background-position: -224px 0;
+}
+#menu-sprite-robbery {
+  background-position: -256px 0;
+}
+#menu-sprite-nightlife {
+  background-position: -448px 0;
+}
+#menu-sprite-drugdealer {
+  background-position: -960px 0;
+}
+#menu-sprite-buildings {
+  background-position: -992px 0;
+}
+#menu-sprite-hospital {
+  background-position: -512px 0;
+}
+#menu-sprite-bank {
+  background-position: -576px 0;
+}
+#menu-sprite-casino {
+  background-position: -800px 0;
+}
+#menu-sprite-prison {
+  background-position: -544px 0;
+}

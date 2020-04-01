@@ -1,29 +1,8 @@
-body {
-  background-color: tan;
-}
 .appPage {
-  height: calc(100vh - 40px);
-  width: calc(100vw - 40px);
-  margin: 20px;
-  background-color: wheat;
+  min-height: calc(100vh - 20px);
+  width: calc(100vw - 20px);
+  margin: 10px;
+  background-color: rgb(230, 223, 211);
   overflow: hidden;
   display: flex;
-}
-.leftNav {
-  height: 100%;
-  width: 250px;
-
-  background-color: red;
-}
-
-.tasks {
-  height: 100%;
-  width: calc(100% - 500px);
-
-  background-color: blue;
-}
-.rightNav {
-  height: 100%;
-  width: 250px;
-  background-color: green;
 }
