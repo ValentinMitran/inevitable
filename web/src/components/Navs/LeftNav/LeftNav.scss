@@ -20,6 +20,10 @@
   span {
     font-size: 16px;
   }
+  @media (max-width: 768px) {
+    display: none;
+  }
+
 }
 .menu-sprite {
   width: 32px;

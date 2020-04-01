@@ -15,19 +15,23 @@ function RightNav() {
       <hr />
       <div className="stats">
         <div className="stat">
-          <span>Intelligence</span> 590
+          <span>Intelligence</span>
+          590
         </div>
         <div className="stat">
-          <span>Strength</span> 670
+          <span>Strength</span>
+          670
         </div>
         <div className="stat">
-          <span>Charisma</span> 714
+          <span>Charisma</span>
+          714
         </div>
         <div className="stat">
-          <span>Tolerance</span> 684
+          <span>Tolerance</span>
+          684
         </div>
       </div>
-      <div className="balance">Cash: &#36; 76,181</div>
+      <div className="balance"><span>Cash</span> &#36; 76,181</div>
       <hr />
     </div>
   );
