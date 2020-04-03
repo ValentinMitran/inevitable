@@ -1,8 +1,7 @@
 .main {
-  width: calc(100vw - 72px);
-  height: calc(100vh - 56px);
-  background-color: #F9F9F9;
-  margin-top: 56px;
-  margin-left: 72px;
-  overflow-x: hidden;
+  width: 100%;
+  padding: 5px 10px;
+  background-color: teal;
+  margin: 0 5px;
+  border: 2px solid black;
 }
