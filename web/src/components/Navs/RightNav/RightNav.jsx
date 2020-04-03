@@ -31,8 +31,16 @@ function RightNav() {
           684
         </div>
       </div>
-      <div className="balance"><span>Cash</span> &#36; 76,181</div>
+      <div className="balance">
+        <span>Cash</span> &#36; 76,181
+      </div>
       <hr />
+      <div className="vitals">
+        <span>Energy: 100%</span>
+        <span>Cops: 10%</span>
+      </div>
+      <hr />
+      <div className="credits">Credits: 0</div>
     </div>
   );
 }
