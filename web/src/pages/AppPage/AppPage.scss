@@ -1,7 +1,25 @@
+.app {
+  background: linear-gradient(rgba(10, 10, 10, 0.6), rgba(0, 0, 0, 0.9)),
+    repeating-linear-gradient(
+      0,
+      transparent,
+      transparent 2px,
+      black 3px,
+      black 3px
+    ),
+    url("https://valentinmitran.com/static/img/splash.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
 .appPage {
-  background-color: rgb(230, 223, 211);
+  max-width: 1100px;
+  margin: 20px auto;
   overflow: hidden;
   display: flex;
+
   @media (max-width: 768px) {
     margin: 0px;
     width: 100vw;
@@ -11,9 +29,9 @@
 .main {
   width: 100%;
   height: 100%;
-  padding: 5px 10px;
+  padding: 0px 10px;
   background-color: rgb(167, 167, 167);
-  margin: 5px;
+  margin: 0px 5px;
   border: 2px solid black;
   @media (max-width: 768px) {
     margin: 56px 0px;

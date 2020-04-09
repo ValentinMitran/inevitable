@@ -1,7 +1,8 @@
 .leftNav {
   width: 250px;
+  height: 100%;
   font-size: 10px;
-  background-color: #464646;
+  background-color: rgba(70, 70, 70, 0.9);
   border: 2px solid #000000;
   nav {
     display: flex;
@@ -13,13 +14,12 @@
     color: white;
     display: flex;
     &:hover {
-      background-color: rgb(163, 163, 163);
+      background-color: rgba(163, 163, 163, 0.5);
     }
   }
   span {
     font-size: 16px;
   }
- 
 }
 .menu-sprite {
   width: 32px;

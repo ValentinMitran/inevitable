@@ -13,13 +13,14 @@
   background-size: cover;
   background-position: center;
   overflow: hidden;
+  display: flex;
 }
+
 .auth-form {
   width: 320px;
   padding: 20px;
   background: rgba(255, 255, 255, 0.8);
   margin: auto;
-  margin-top: 150px;
   display: block;
   border-radius: 7px;
   form {
