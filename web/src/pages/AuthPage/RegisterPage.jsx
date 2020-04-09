@@ -1,85 +1,86 @@
 import React, { useState, useEffect } from "react";
-import { Link, Redirect, withRouter } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import "./AuthPage.scss";
+import { TextField } from "@material-ui/core";
+import { toast } from "react-toastify";
 
 function RegisterPage({ history }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  const [registerError, setRegisterError] = useState(false);
-
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    localStorage.authToken ? setIsLoggedIn(true) : setIsLoading(false);
-  }, []);
+    localStorage.authToken ? history.push("/") : setIsLoading(false);
+  }, [history]);
 
-  const submitForm = async e => {
+  const submitForm = async (e) => {
     e.preventDefault();
 
     let response = await fetch("/api/user/register", {
       method: "Post",
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
       },
       body: JSON.stringify({
         username: username,
-        password: password
-      })
-    }).catch(err => {
+        password: password,
+      }),
+    }).catch((err) => {
       alert(err);
     });
     response = await response.text();
     if (response === "Success") {
-      alert("Registration Successful");
+      toast.success("Registration Successful");
       history.push("/login");
     } else {
-      setRegisterError(response);
+      toast.error(response);
       setUsername("");
       setPassword("");
     }
   };
 
   if (isLoading) {
-    return (
-      <>
-        Loading...
-        {isLoggedIn ? <Redirect to="/" /> : null}
-      </>
-    );
+    return <>Loading...</>;
   }
 
   return (
     <>
-      {isLoggedIn ? <Redirect to="/" /> : null}
       <div className="auth-wrapper">
         <div className="auth-form">
-          <img
-            alt=""
-            src="https://raw.githubusercontent.com/ValentinMitran/inevitable/master/Inevitable.png"
-          />
-          <div>{registerError}</div>
           <form onSubmit={submitForm}>
-            Username:
-            <input
-              type="text"
-              name="username"
-              id="username"
+            <TextField
+              required
+              id="outlined"
+              label="Username"
+              variant="outlined"
               value={username}
-              onChange={e => setUsername(e.target.value)}
+              onChange={(e) => setUsername(e.target.value)}
+              style={{ margin: "0px 10px 10px" }}
             />
-            Password:
-            <input
+            <TextField
+              required
+              id="outlined-password-input"
+              label="Password"
               type="password"
-              name="password"
-              id="password"
+              variant="outlined"
               value={password}
-              onChange={e => setPassword(e.target.value)}
+              onChange={(e) => setPassword(e.target.value)}
+              style={{ margin: "0px 10px" }}
             />
-            <button type="submit">Register</button>
+            <button class="btn" type="submit">
+              <span
+                class="btn__content glitchBtn"
+                data-text="Register"
+                style={{ "font-size": "1.2em", margin: "auto" }}
+              >
+                Register
+              </span>
+              <span class="btn__glitch"></span>
+              <span class="btn__label">Inevitable</span>
+            </button>
           </form>
-          <Link to="/login">LOGIN</Link>
+          <Link to="/login">Login</Link>
         </div>
       </div>
     </>

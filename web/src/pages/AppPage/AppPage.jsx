@@ -5,8 +5,11 @@ import LeftNav from "./../../components/Navs/LeftNav/LeftNav";
 import Newspaper from "./../../components/Main/Newspaper/Newspaper";
 import Tasks from "./../../components/Main/Tasks/Tasks";
 import RightNav from "./../../components/Navs/RightNav/RightNav";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import "./AppPage.scss";
+toast.configure();
 
 function AppPage() {
   return (
