@@ -26,20 +26,21 @@
     }
   }
   @media (max-width: 768px) {
-    display: none;
+    height: calc(100% - 56px);
+    margin: 56px 0;
   }
   .balance {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .vitals{
+  .vitals {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  .credits{
+  .credits {
     text-align: center;
   }
 }

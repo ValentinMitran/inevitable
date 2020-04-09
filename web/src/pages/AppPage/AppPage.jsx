@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
 import Error404 from "./../ErrorPage/Error404";
 import LeftNav from "./../../components/Navs/LeftNav/LeftNav";
@@ -7,15 +7,38 @@ import Tasks from "./../../components/Main/Tasks/Tasks";
 import RightNav from "./../../components/Navs/RightNav/RightNav";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { MdMenu, MdClose } from "react-icons/md";
+import { useMediaQuery } from "react-responsive";
 
 import "./AppPage.scss";
 toast.configure();
 
 function AppPage() {
+  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+  const [isLeftOpen, setIsLeftOpen] = useState(false);
+  const [isRightOpen, setIsRightOpen] = useState(false);
+
+  useEffect(() => {}, []);
+
   return (
     <>
       <div className="appPage">
-        <LeftNav />
+        <div className="mobileNav">
+          {isLeftOpen ? (
+            <MdClose id="leftOpener" onClick={() => setIsLeftOpen(false)} />
+          ) : (
+            <MdMenu id="leftOpener" onClick={() => setIsLeftOpen(true)} />
+          )}
+          <span className="glitch" data-text="Inevitable">
+            Inevitable
+          </span>
+          {isRightOpen ? (
+            <MdClose id="rightOpener" onClick={() => setIsRightOpen(false)} />
+          ) : (
+            <MdMenu id="rightOpener" onClick={() => setIsRightOpen(true)} />
+          )}
+        </div>
+        {isMobile ? isLeftOpen ? <LeftNav /> : null : <LeftNav />}
         <div className="main">
           <Switch>
             <Route exact path="/">
@@ -37,7 +60,7 @@ function AppPage() {
             </Route>
           </Switch>
         </div>
-        <RightNav />
+        {isMobile ? isRightOpen ? <RightNav /> : null : <RightNav />}
       </div>
     </>
   );
