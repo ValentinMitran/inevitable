@@ -1,7 +1,8 @@
 import React from "react";
 import "./LandingPage.scss";
+import { withRouter } from "react-router-dom";
 
-function LandingPage() {
+function LandingPage({ history }) {
   return (
     <div id="lp">
       <div id="lpWrapper">
@@ -9,8 +10,10 @@ function LandingPage() {
           Inevitable
         </h1>
         <span class="sub">The Cyberpunk era starts here</span>
-        <button class="btn">
-          <span class="btn__content">ENTER</span>
+        <button class="btn" onClick={() => history.push("/login")}>
+          <span class="btn__content glitchBtn" data-text="ENTER">
+            ENTER
+          </span>
           <span class="btn__glitch"></span>
           <span class="btn__label">Inevitable</span>
         </button>
@@ -19,4 +22,4 @@ function LandingPage() {
   );
 }
 
-export default LandingPage;
+export default withRouter(LandingPage);

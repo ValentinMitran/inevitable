@@ -36,12 +36,18 @@ h1 {
   text-align: center;
   display: flex;
   flex-direction: column;
+  @media (max-width: 767px) {
+    width: 100vw;
+  }
 }
 
 .sub {
   color: rgb(100, 220, 220);
   font-weight: 900;
   letter-spacing: 1em;
+  @media (max-width: 767px) {
+    letter-spacing: 0;
+  }
 }
 
 @mixin glitchCopy {
@@ -73,6 +79,9 @@ h1 {
     left: -2px;
     text-shadow: -2px 0 #00fff9, 2px 2px #ff00c1;
     animation: glitch-anim2 1s infinite linear alternate-reverse;
+  }
+  @media (max-width: 767px) {
+    font-size: 2em;
   }
 }
 
@@ -125,10 +134,37 @@ h1 {
   cursor: pointer;
   position: relative;
   font-family: Tomorrow, sans-serif;
-  font-size: 0.85rem;
   text-transform: uppercase;
   color: var(--black-color);
   clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
+  @media (max-width: 767px) {
+    margin: 10px auto;
+  }
+}
+.glitchBtn {
+  position: relative;
+  color: white;
+  font-size: 1.5em;
+  letter-spacing: 0.5em;
+  animation: glitch-skew 1s infinite linear alternate-reverse;
+
+  &::before {
+    @include glitchCopy;
+    left: 2px;
+    text-shadow: -2px 0 #ff00c1;
+    clip: rect(44px, 450px, 56px, 0);
+    animation: glitch-anim 5s infinite linear alternate-reverse;
+  }
+
+  &::after {
+    @include glitchCopy;
+    left: -2px;
+    text-shadow: -2px 0 #00fff9, 2px 2px #ff00c1;
+    animation: glitch-anim2 1s infinite linear alternate-reverse;
+  }
+  @media (max-width: 767px) {
+    font-size: 2em;
+  }
 }
 
 .btn__content {
