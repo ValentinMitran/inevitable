@@ -1,0 +1,84 @@
+.mobileNav {
+  display: none;
+  @media (max-width: 768px) {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    margin: 0px;
+    width: 100vw;
+    height: 56px;
+    background: #355c7d;
+    background: -webkit-linear-gradient(to right, #c06c84, #6c5b7b, #355c7d);
+    background: linear-gradient(to right, #c06c84, #6c5b7b, #355c7d);
+    svg {
+      font-size: 35px;
+    }
+    #leftOpener {
+      position: absolute;
+      left: 10px;
+    }
+    span {
+      display: block;
+      font-size: 20px;
+      font-weight: 900;
+      margin: auto;
+    }
+  }
+}
+.mobileSide {
+  width: 600px;
+  margin-top: 56px;
+
+  .userProfile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img {
+      margin-top: 5px;
+      width: 120px;
+    }
+  }
+  .stats {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    .stat {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  .balance {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .vitals {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .credits {
+    text-align: center;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    a {
+      text-decoration: none;
+      color: black;
+      display: flex;
+      padding: 10px;
+      .menu-sprite {
+        margin-right: 10px;
+      }
+    }
+  }
+}
