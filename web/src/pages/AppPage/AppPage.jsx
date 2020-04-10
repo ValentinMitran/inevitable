@@ -4,6 +4,7 @@ import Error404 from "./../ErrorPage/Error404";
 import LeftNav from "./../../components/Navs/LeftNav/LeftNav";
 import Newspaper from "./../../components/Main/Newspaper/Newspaper";
 import Tasks from "./../../components/Main/Tasks/Tasks";
+import Prison from "./../../components/Main/Prison/Prison";
 import RightNav from "./../../components/Navs/RightNav/RightNav";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -38,7 +39,9 @@ function AppPage() {
               <Route path="/hospital">Hospital</Route>
               <Route path="/bank">Bank</Route>
               <Route path="/casino">Casino</Route>
-              <Route path="/prison">Prison</Route>
+              <Route path="/prison">
+                <Prison />
+              </Route>
               <Route path="*">
                 <Error404 />
               </Route>

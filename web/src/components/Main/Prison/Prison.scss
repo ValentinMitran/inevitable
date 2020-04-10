@@ -1,0 +1,36 @@
+.prison {
+  .prisonHeader {
+    position: relative;
+    margin: 10px 0;
+    h1 {
+      text-align: center;
+    }
+    svg {
+      position: absolute;
+      font-size: 30px;
+      top: 5px;
+      right: 0;
+      cursor: pointer;
+    }
+  }
+  .prisonInfo {
+    display: flex;
+    margin: 10px 0;
+    img {
+      width: 600px;
+    }
+    span {
+      padding: 0 20px;
+    }
+  }
+  .prisonAction {
+    h2 {
+      margin: 0 0 10px;
+    }
+    form {
+      margin: 15px 0;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
