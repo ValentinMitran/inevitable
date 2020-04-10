@@ -1,0 +1,29 @@
+.tasks {
+    .tasksHeader {
+      position: relative;
+      margin: 10px 0;
+      h1 {
+        text-align: center;
+      }
+      svg {
+        position: absolute;
+        font-size: 30px;
+        top: 5px;
+        right: 0;
+        cursor: pointer;
+      }
+    }
+    .tasksInfo {
+      display: flex;
+      margin: 10px 0;
+      width: 100%;
+      img {
+        width: 200px;
+      }
+      span {
+        width: 400px;
+        padding: 0 20px;
+      }
+    }
+  }
+  
