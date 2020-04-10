@@ -18,7 +18,7 @@ function MobileNav() {
           Inevitable
         </span>
       </div>
-      {isSideOpen ? <MobileSide /> : null}
+      {isSideOpen ? <MobileSide setIsSideOpen={setIsSideOpen} /> : null}
     </>
   );
 }

@@ -2,7 +2,7 @@ import React from "react";
 import "./MobileNav.scss";
 import { Link } from "react-router-dom";
 
-function MobileSide() {
+function MobileSide({ setIsSideOpen }) {
   return (
     <>
       <div className="mobileSide">
@@ -45,7 +45,7 @@ function MobileSide() {
         <div className="credits">Credits: 0</div>
         <hr />
         <nav>
-          <Link to="/attack">
+          <Link to="/attack" onClick={() => setIsSideOpen(false)}>
             <div id="menu-sprite-assault" className="menu-sprite"></div>
             <div>
               <span>Attack</span>
@@ -53,7 +53,7 @@ function MobileSide() {
               Have a drink!
             </div>
           </Link>
-          <Link to="/missions">
+          <Link to="/missions" onClick={() => setIsSideOpen(false)}>
             <div id="menu-sprite-robbery" className="menu-sprite"></div>
             <div>
               <span>Missions</span>
@@ -61,7 +61,7 @@ function MobileSide() {
               Do your job!
             </div>
           </Link>
-          <Link to="/club">
+          <Link to="/club" onClick={() => setIsSideOpen(false)}>
             <div id="menu-sprite-nightlife" className="menu-sprite"></div>
             <div>
               <span>Club</span>
@@ -69,7 +69,7 @@ function MobileSide() {
               Have some fun
             </div>
           </Link>
-          <Link to="/stockmarket">
+          <Link to="/stockmarket" onClick={() => setIsSideOpen(false)}>
             <div id="menu-sprite-drugdealer" className="menu-sprite"></div>
             <div>
               <span>Stock Market</span>
@@ -77,7 +77,7 @@ function MobileSide() {
               Invest!
             </div>
           </Link>
-          <Link to="/buildings">
+          <Link to="/buildings" onClick={() => setIsSideOpen(false)}>
             <div id="menu-sprite-buildings" className="menu-sprite"></div>
             <div>
               <span>Buildings</span>
@@ -85,7 +85,7 @@ function MobileSide() {
               Real estate at its finest!
             </div>
           </Link>
-          <Link to="/hospital">
+          <Link to="/hospital" onClick={() => setIsSideOpen(false)}>
             <div id="menu-sprite-hospital" className="menu-sprite"></div>
             <div>
               <span>Hospital</span>
@@ -93,7 +93,7 @@ function MobileSide() {
               Healthcare!
             </div>
           </Link>
-          <Link to="/bank">
+          <Link to="/bank" onClick={() => setIsSideOpen(false)}>
             <div id="menu-sprite-bank" className="menu-sprite"></div>
             <div>
               <span>Bank</span>
@@ -101,7 +101,7 @@ function MobileSide() {
               Your finances!
             </div>
           </Link>
-          <Link to="/casino">
+          <Link to="/casino" onClick={() => setIsSideOpen(false)}>
             <div id="menu-sprite-casino" className="menu-sprite"></div>
             <div>
               <span>Casino</span>
@@ -109,7 +109,7 @@ function MobileSide() {
               Why not try to win some easy cash?
             </div>
           </Link>
-          <Link to="/prison">
+          <Link to="/prison" onClick={() => setIsSideOpen(false)}>
             <div id="menu-sprite-prison" className="menu-sprite"></div>
             <div>
               <span>Prison</span>
