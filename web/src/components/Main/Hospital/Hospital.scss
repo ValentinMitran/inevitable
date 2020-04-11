@@ -18,10 +18,10 @@
     margin: 10px 0;
     width: 100%;
     img {
-      width: 400px;
+      width: 200px;
     }
     span {
-      width: 400px;
+      width: calc(100% - 200px);
       padding: 0 20px;
     }
   }

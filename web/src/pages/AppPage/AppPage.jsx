@@ -6,6 +6,7 @@ import Newspaper from "./../../components/Main/Newspaper/Newspaper";
 import Tasks from "./../../components/Main/Tasks/Tasks";
 import Hospital from "./../../components/Main/Hospital/Hospital";
 import Prison from "./../../components/Main/Prison/Prison";
+import Club from "./../../components/Main/Club/Club";
 import RightNav from "./../../components/Navs/RightNav/RightNav";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -30,18 +31,15 @@ function AppPage() {
               <Route exact path="/">
                 <Newspaper />
               </Route>
-              <Route path="/attack">Attack</Route>
               <Route path="/missions">
                 <Tasks />
               </Route>
-              <Route path="/club">Club </Route>
-              <Route path="/stockmarket">StockMarket</Route>
-              <Route path="/buildings">Buildings</Route>
+              <Route path="/club">
+                <Club />
+              </Route>
               <Route path="/hospital">
                 <Hospital />
               </Route>
-              <Route path="/bank">Bank</Route>
-              <Route path="/casino">Casino</Route>
               <Route path="/prison">
                 <Prison />
               </Route>

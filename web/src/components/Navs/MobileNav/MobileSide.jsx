@@ -45,14 +45,6 @@ function MobileSide({ setIsSideOpen }) {
         <div className="credits">Credits: 0</div>
         <hr />
         <nav>
-          <Link to="/attack" onClick={() => setIsSideOpen(false)}>
-            <div id="menu-sprite-assault" className="menu-sprite"></div>
-            <div>
-              <span>Attack</span>
-              <br />
-              Have a drink!
-            </div>
-          </Link>
           <Link to="/missions" onClick={() => setIsSideOpen(false)}>
             <div id="menu-sprite-robbery" className="menu-sprite"></div>
             <div>
@@ -69,22 +61,6 @@ function MobileSide({ setIsSideOpen }) {
               Have some fun
             </div>
           </Link>
-          <Link to="/stockmarket" onClick={() => setIsSideOpen(false)}>
-            <div id="menu-sprite-drugdealer" className="menu-sprite"></div>
-            <div>
-              <span>Stock Market</span>
-              <br />
-              Invest!
-            </div>
-          </Link>
-          <Link to="/buildings" onClick={() => setIsSideOpen(false)}>
-            <div id="menu-sprite-buildings" className="menu-sprite"></div>
-            <div>
-              <span>Buildings</span>
-              <br />
-              Real estate at its finest!
-            </div>
-          </Link>
           <Link to="/hospital" onClick={() => setIsSideOpen(false)}>
             <div id="menu-sprite-hospital" className="menu-sprite"></div>
             <div>
@@ -93,22 +69,7 @@ function MobileSide({ setIsSideOpen }) {
               Healthcare!
             </div>
           </Link>
-          <Link to="/bank" onClick={() => setIsSideOpen(false)}>
-            <div id="menu-sprite-bank" className="menu-sprite"></div>
-            <div>
-              <span>Bank</span>
-              <br />
-              Your finances!
-            </div>
-          </Link>
-          <Link to="/casino" onClick={() => setIsSideOpen(false)}>
-            <div id="menu-sprite-casino" className="menu-sprite"></div>
-            <div>
-              <span>Casino</span>
-              <br />
-              Why not try to win some easy cash?
-            </div>
-          </Link>
+
           <Link to="/prison" onClick={() => setIsSideOpen(false)}>
             <div id="menu-sprite-prison" className="menu-sprite"></div>
             <div>

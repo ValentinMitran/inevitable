@@ -36,5 +36,6 @@
   @media (max-width: 768px) {
     margin: 56px 0px;
     border: none;
+    width: calc(100vw - 20px);
   }
 }

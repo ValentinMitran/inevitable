@@ -6,7 +6,7 @@ function RightNav() {
     <div className="rightNav">
       <div className="userProfile">
         <img
-          src="https://yt3.ggpht.com/-yiwpbXgTmYE/AAAAAAAAAAI/AAAAAAAAAAA/AAKWJJPMcgnrP1cptGUy-IH3cMbPHhfVIg/s88-c-k-c0xffffffff-no-rj-mo/photo.jpg"
+          src="https://avatarfiles.alphacoders.com/206/thumb-206406.jpg"
           alt="Profile"
         />
         <div>@lol</div>

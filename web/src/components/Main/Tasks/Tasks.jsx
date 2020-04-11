@@ -11,8 +11,7 @@ function Tasks() {
       </div>
       <div className="tasksInfo">
         <img
-          src="
-          https://vignette.wikia.nocookie.net/mortalinstruments/images/d/d4/Pandemonium_Club.png/revision/latest/scale-to-width-down/340?cb=20140227011822"
+          src="https://vignette.wikia.nocookie.net/remnantsofearth/images/8/8d/Bountyhunterlogo.png/revision/latest/scale-to-width-down/340?cb=20140502113602"
           alt=""
         />
         <span>
